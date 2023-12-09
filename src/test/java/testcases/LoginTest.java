@@ -1,5 +1,7 @@
 package testcases;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -16,7 +18,7 @@ public class LoginTest extends BaseClass  {
 		Thread.sleep(4000);
 		String actualErrorMessage = sauceLogin.getLoginFailureMessage();
 		System.out.println(actualErrorMessage);
-		Assert.assertEquals(actualErrorMessage, "Epic sadface: Username and password do not match any user in this service");
+		AssertJUnit.assertEquals(actualErrorMessage, "Epic sadface: Username and password do not match any user in this service");
 	}
 	
 	@Test
@@ -26,7 +28,7 @@ public class LoginTest extends BaseClass  {
 
 		sauceLogin.login("standard_user", "secret_sauce");
 		Thread.sleep(4000);
-		Assert.assertEquals(sauceProduct.isProductsSectionPresent(), true);
+		AssertJUnit.assertEquals(sauceProduct.isProductsSectionPresent(), true);
 	}
 
 }
