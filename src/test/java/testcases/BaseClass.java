@@ -14,12 +14,12 @@ public class BaseClass {
 	
 	WebDriver driver;
 	
-	@BeforeSuite
+	@BeforeSuite(alwaysRun = true)
 	public void setUpAll() {
 		WebDriverManager.chromedriver().setup();
 	}
 	
-	@BeforeMethod
+	@BeforeMethod(alwaysRun = true)
 	public void setUpDriver() {
 		driver = new ChromeDriver();
 		driver.get("https://www.saucedemo.com/v1/");
@@ -27,7 +27,7 @@ public class BaseClass {
 		driver.manage().window().maximize();
 	}
 	
-	@AfterMethod
+	@AfterMethod(alwaysRun = true)
 	public void cleanUp() {
 		driver.quit();
 	}

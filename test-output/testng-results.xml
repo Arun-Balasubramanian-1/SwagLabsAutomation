@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-12-09T09:08:38Z" name="Suite" finished-at="2023-12-09T09:08:49Z" duration-ms="11020">
+    <groups>
+      <group name="sanity">
+        <method signature="LoginTest.loginSuccess()[pri:0, instance:testcases.LoginTest@7d9e8ef7]" name="loginSuccess" class="testcases.LoginTest"/>
+      </group> <!-- sanity -->
+    </groups>
+    <test started-at="2023-12-09T09:08:38Z" name="Test" finished-at="2023-12-09T09:08:49Z" duration-ms="11020">
+      <class name="testcases.LoginTest">
+        <test-method is-config="true" signature="setUpAll()[pri:0, instance:testcases.LoginTest@7d9e8ef7]" started-at="2023-12-09T09:08:38Z" name="setUpAll" finished-at="2023-12-09T09:08:38Z" duration-ms="344" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpAll -->
+        <test-method is-config="true" signature="setUpDriver()[pri:0, instance:testcases.LoginTest@7d9e8ef7]" started-at="2023-12-09T09:08:38Z" name="setUpDriver" finished-at="2023-12-09T09:08:40Z" duration-ms="1207" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpDriver -->
+        <test-method signature="loginFailure()[pri:0, instance:testcases.LoginTest@7d9e8ef7]" started-at="2023-12-09T09:08:40Z" name="loginFailure" finished-at="2023-12-09T09:08:44Z" duration-ms="4310" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginFailure -->
+        <test-method is-config="true" signature="cleanUp()[pri:0, instance:testcases.LoginTest@7d9e8ef7]" started-at="2023-12-09T09:08:44Z" name="cleanUp" finished-at="2023-12-09T09:08:44Z" duration-ms="82" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method is-config="true" signature="setUpDriver()[pri:0, instance:testcases.LoginTest@7d9e8ef7]" started-at="2023-12-09T09:08:44Z" name="setUpDriver" finished-at="2023-12-09T09:08:45Z" duration-ms="957" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpDriver -->
+        <test-method signature="loginSuccess()[pri:0, instance:testcases.LoginTest@7d9e8ef7]" started-at="2023-12-09T09:08:45Z" name="loginSuccess" finished-at="2023-12-09T09:08:49Z" duration-ms="4378" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginSuccess -->
+        <test-method is-config="true" signature="cleanUp()[pri:0, instance:testcases.LoginTest@7d9e8ef7]" started-at="2023-12-09T09:08:49Z" name="cleanUp" finished-at="2023-12-09T09:08:49Z" duration-ms="70" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+      </class> <!-- testcases.LoginTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
