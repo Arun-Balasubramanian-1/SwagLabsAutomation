@@ -19,11 +19,18 @@ public class SauceDemoLogin {
 	@FindBy(id="login-button")
 	WebElement loginButton;
 	
+	@FindBy(xpath="//h3[@data-test='error']")
+	WebElement loginFailureMsg;
+	
 	//============Page Methods======================
 	public void login(String username, String password) {
 		usernameField.sendKeys(username);
 		passwordField.sendKeys(password);
 		loginButton.click();
+	}
+	
+	public String getLoginFailureMessage() {
+		return loginFailureMsg.getText();
 	}
 	
 	//Initialize driver and page elements
