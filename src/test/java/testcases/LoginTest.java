@@ -23,10 +23,25 @@ public class LoginTest extends BaseClass  {
 	public void loginSuccess()throws InterruptedException {
 		SauceDemoLogin sauceLogin = new SauceDemoLogin(driver);
 		SauceProducts  sauceProduct = new SauceProducts(driver);
-
 		sauceLogin.login("standard_user", "secret_sauce");
 		Thread.sleep(4000);
 		Assert.assertEquals(sauceProduct.isProductsSectionPresent(), true);
+	}
+	
+	@Test
+	public void addItemToCart() throws InterruptedException {
+		SauceDemoLogin sauceLogin = new SauceDemoLogin(driver);
+		SauceProducts  sauceProduct = new SauceProducts(driver);
+		String product = "Sauce Labs Backpack";
+
+		sauceLogin.login("standard_user", "secret_sauce");
+		Thread.sleep(3000);
+		Assert.assertEquals(sauceProduct.isAddToCartPresent(product), true);
+		Assert.assertEquals(sauceProduct.isRemoveItemPresent(product), false);
+		sauceProduct.clickAddToCart(product);
+		Thread.sleep(3000);
+		Assert.assertEquals(sauceProduct.isAddToCartPresent(product), false);
+		Assert.assertEquals(sauceProduct.isRemoveItemPresent(product), true);
 	}
 
 }
